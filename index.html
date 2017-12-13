@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>微信开发模板</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable"/>
+		<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+		<meta content="telephone=no" name="format-detection"/>
+		<link rel="stylesheet" href="css/swiper-3.4.2.min.css" />
+		<link href="https://cdn.bootcss.com/animate.css/3.5.2/animate.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/popWindow.css" />
+		<link rel="stylesheet" href="css/index.css" />				
+		<script type="text/javascript" src="js/swiper-3.4.2.min.js" ></script>
+		<script type="text/javascript" src="js/rem.js" ></script>
+		<script type="text/javascript" src="js/popWin.js" ></script>		
+		<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	</head>
+	<body>
+		<audio id="pMusic"  loop="loop" preload  src="music/wx.mp3" hidden="hidden"></audio >
+		<!--视频聊天-->
+		<div id="phoneCome">
+			<div class="head">
+				<div class="floatl">
+					<img src="img/head.png" />
+				</div>
+				<div class="floatl">
+					<p class="name">雅洁五金营销总经理</p>
+					<p class="chat">邀请你视频聊天</p>
+				</div>
+				<div class="clearl"></div>
+			</div>
+			<div class="twoBox refuse">
+				<a href="###">
+					<img src="img/refuse.png" />
+				</a>
+				<p>拒绝</p>
+			</div>
+			<div class="twoBox accept">
+				<a href="###">
+					<img src="img/accept.png" />
+				</a>
+				<p>接听</p>
+			</div>
+		</div>
+		<!--播放视频-->
+		<div class="video">
+			<video
+				id="video" 
+				src="hotata.mp4"
+				preload="auto" 
+				webkit-playsinline="true" 
+				playsinline="true" 
+				x-webkit-airplay="allow" 
+				x5-video-player-type="h5" 
+				x5-video-player-fullscreen="true" 
+				x5-video-orientation="portraint"
+				style="object-fit:fill"
+			></video>
+			<button id="over">跳过</button>
+		</div>
+		<!--倒计时-->	
+		<div class="swiper-container" style="opacity: 0;" id="index">
+	        <div class="swiper-wrapper">
+	            <div class="swiper-slide">
+	            	<div id="timeCount">
+	            		<ul>
+	            			<li>
+	            				<img src="img/logo.png" class="logo" />
+	            			</li>
+	            			<li>
+	            				<img src="img/title.png" class="title" />
+	            			</li>
+	            			<li>
+	            				<p class="timeTitle">距离2018雅洁年会倒计时</p>
+	            			</li>
+	            			<li>
+	            				<div class="timeBox">
+	            					<div class="floatl">
+	            						<p>天</p>
+	            						<p>18</p>
+	            					</div>
+	            					<div class="floatl">
+	            						<p>时</p>
+	            						<p>18</p>
+	            					</div>
+	            					<div class="floatl">
+	            						<p>分</p>
+	            						<p>18</p>
+	            					</div>
+	            					<div class="floatl">
+	            						<p>秒</p>
+	            						<p>18</p>
+	            					</div>
+	            					<div class="clearl"></div>
+	            				</div>
+	            			</li>
+	            			<li>
+	            				<div class="address">
+	            					<p>2017年12月27号（12月26日报到）</p>
+	            					<p>广东省佛山市三水区绿湖温泉度假酒店</p>
+	            				</div>
+	            			</li>
+	            		</ul>
+	            		<div class="nextBox">
+	            			<a href="###" class="next"><img src="img/next.png"/></a>
+	            		</div>
+	            	</div>
+	            </div>
+	            <div class="swiper-slide">
+	            	<div id="applyStart">
+	            		<ul>
+	            			<li>
+	            				<img src="img/logo.png" class="alogo" />
+	            			</li>
+	            			<li>
+	            				<img src="img/title.png" class="atitle" />
+	            			</li>
+	            		</ul>
+	            		<div class="btn">
+	            			<button>我要报名</button>
+	            		</div>
+	            	</div>
+	            </div>
+	        </div>
+	   </div>		
+		<script>
+			var swiper;
+			var sTime = 0;
+			swiper = new Swiper('.swiper-container', {
+		    	direction: 'vertical',
+		    	initialSlide :0,
+		    	onSlideChangeEnd: function(swiper){
+//		    		if(sTime==0)
+//		    		{
+//		    			sTime=1;
+//		    		}else{
+		    			if(swiper.activeIndex==0)
+					    {
+					    	//第一p
+					    	$('.logo').show().addClass('animated bounceInRight');
+							$('.title').show().addClass('animated fadeInDown');
+							$('.timeTitle').show().addClass('animated rotateIn');
+							$('.timeBox div').eq(2).show().addClass('animated bounceInLeft');
+							$('.timeBox div').eq(3).show().addClass('animated bounceInLeft');
+							$('.timeBox div').eq(0).show().addClass('animated bounceInRight');
+							$('.timeBox div').eq(1).show().addClass('animated bounceInRight');
+							$('.address p').eq(0).show().addClass('animated fadeInDown');
+							$('.address p').eq(1).show().addClass('animated fadeInUp');
+							//第二p
+							$('.alogo').hide().removeClass('animated bounceInRight');
+							$('.atitle').hide().removeClass('animated tada');
+							$('.btn').hide().removeClass('animated bounceInLeft');
+					    }else{
+					    	//第一p
+					    	$('.logo').hide().removeClass('animated bounceInRight');
+							$('.title').hide().removeClass('animated fadeInDown');
+							$('.timeTitle').hide().removeClass('animated rotateIn');
+							$('.timeBox div').eq(2).hide().removeClass('animated bounceInLeft');
+							$('.timeBox div').eq(3).hide().removeClass('animated bounceInLeft');
+							$('.timeBox div').eq(0).hide().removeClass('animated bounceInRight');
+							$('.timeBox div').eq(1).hide().removeClass('animated bounceInRight');
+							$('.address p').hide().eq(0).removeClass('animated fadeInDown');
+							$('.address p').hide().eq(1).removeClass('animated fadeInUp');
+							//第二p
+							$('.alogo').show().addClass('animated bounceInRight');
+							$('.atitle').show().addClass('animated tada');
+							$('.btn').show().addClass('animated bounceInLeft');
+					    }
+//		    		}
+				    
+				}
+			});
+		</script>
+		<script type="text/javascript" src="js/index.js" ></script>
+	</body>
+</html>

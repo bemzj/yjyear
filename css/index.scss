@@ -1,0 +1,205 @@
+html, body {
+        position: relative;
+        height: 100%;
+        font-family: "微软雅黑";
+        overflow: hidden;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+#phoneCome{
+    width: 100%;
+    height: 100%;
+    background: url(../img/phoneBkg.jpg) no-repeat;
+    background-size: cover;
+    position: relative;
+    .head{
+        width: 100%;       
+        >div:nth-child(1){
+            width: 23.75%;
+            padding: 0.5rem 6% 0.5rem 8%;
+        }
+        >div:nth-child(2){
+            width: 60%;
+            color: white;
+            .name{
+                font-size: 0.32rem;
+                margin-top: 0.8rem;
+            }
+            .chat{
+                font-size: 0.28rem;
+                line-height: 0.55rem;
+            }
+        }
+        img{
+            width: 100%;
+        }
+        
+    }
+    .twoBox{
+        width: 19.375%;
+        position: absolute;
+        bottom: 0;
+        left: 18%;
+        a{
+            width: 100%;
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+        p{
+            font-size: 0.26rem;
+            color: white;
+            text-align: center;
+            line-height: 1.0rem;
+        }
+    }
+    .accept{
+       left: auto;
+       right: 18%!important; 
+    }
+}
+//视频
+.video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    video{
+        width: 100%;
+        height: 100%;
+    }
+    #over{
+        position: absolute;
+        right: 0.2rem;
+        bottom: 0.2rem;
+        padding: 0.15rem 0.3rem;
+        border-radius: 0.4rem;
+        color: white;
+        font-size: 0.32rem;
+        background-color: #42413f;
+        margin-bottom: 0.1rem;
+    }
+}
+//
+#timeCount{
+    width: 100%;
+    height: 100%;
+    background: url(../img/time.jpg) no-repeat;
+    background-size: cover;
+    .logo{
+        width: 50%;
+        padding: 0.3rem 0 0 0.3rem;
+    }
+    .title{
+        width: 80.13%;
+        margin: 0 auto;
+        margin-top: 0.8rem;
+    }
+    .timeTitle{
+        text-align: center;
+        font-size: 0.28rem;
+        color: white;
+        margin-top: 0.5rem;
+        margin-bottom: 0.3rem;
+        letter-spacing: 2px;
+    }
+    .timeBox{
+        width: 73.87%;
+        margin: 0 auto;
+        >.floatl{
+            width: 23.2%;
+            margin-right: 2.4%;
+            height: 1.2rem;
+            background-color: #ece8e2;
+            border-radius: 5px;
+            p{
+                text-align: center;
+                color: #5f4572;
+                font-weight:bold ;
+            }
+            p:nth-child(1){
+                font-size: 0.28rem; 
+                margin-top: 0.1rem;
+            }
+            p:nth-child(2){
+                font-size: 0.6rem; 
+                line-height: 0.6rem;
+            }
+        }
+        >.floatl:nth-child(4){
+            margin-right: 0;
+        }
+    }
+    .address{
+        p{
+            text-align: center;
+            color: white;
+        }
+        p:nth-child(1){
+            font-size: 0.26rem;
+            line-height: 0.5rem;
+            margin-top: 0.8rem;
+        }
+        p:nth-child(2){
+            font-size: 0.3rem;
+        }
+    }
+    .nextBox{
+        position: absolute;
+        left: 0;
+        bottom: 0.8rem;
+        width: 100%;
+        
+        a{
+            width: 5.6%;
+            margin: 0 auto;
+            display: block;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+#applyStart{
+    width: 100%;
+    height: 100%;
+    background: url(../img/indexBox.jpg) no-repeat;
+    background-size: cover;
+    .alogo{
+        width: 50%;
+        padding: 0.3rem 0 0 0.3rem;
+        display: none;
+    }
+    .atitle{
+        width: 80.13%;
+        margin: 0 auto;
+        margin-top: 1.6rem;
+        display: none;
+    }
+}
+.btn{
+    position: absolute;
+    left: 11%;
+    bottom: 0.8rem;
+    width: 78%;
+    display: none;
+    button{
+        display: block;
+        width: 100%;
+        height: 0.8rem;
+        background: url(../img/btn.png) no-repeat;
+        background-size: 100% 100%;
+        color: #5f4572;
+        font-size: 0.32rem;       
+    }
+}
