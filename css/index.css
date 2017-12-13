@@ -23,7 +23,7 @@ body {
     width: 100%; }
     #phoneCome .head > div:nth-child(1) {
       width: 23.75%;
-      padding: 0.5rem 6% 0.5rem 8%; }
+      margin: 0.5rem 6% 0.5rem 8%; }
     #phoneCome .head > div:nth-child(2) {
       width: 60%;
       color: white; }
@@ -166,5 +166,206 @@ body {
     background-size: 100% 100%;
     color: #5f4572;
     font-size: 0.32rem; }
+
+#apply {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/applyBkg.jpg) no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: column; }
+  #apply .applyBox {
+    width: 100%; }
+    #apply .applyBox > ul li {
+      position: relative;
+      height: 0.8rem;
+      margin-left: 11%;
+      border-radius: 2px;
+      width: 78%;
+      border: 1px solid #a0a0a0;
+      margin-bottom: 0.15rem;
+      background: url(../img/more.png) no-repeat 97.5% center;
+      background-size: auto 0.22rem;
+      background-color: white; }
+      #apply .applyBox > ul li input {
+        display: block;
+        height: 100%;
+        width: 78%;
+        margin-left: 15%;
+        border: 0;
+        outline: hidden;
+        line-height: 0.8rem;
+        font-size: 0.24rem;
+        color: #5f4572; }
+      #apply .applyBox > ul li input::-webkit-input-placeholder {
+        color: #ada0b7; }
+      #apply .applyBox > ul li input::-ms-input-placeholder {
+        color: #ada0b7; }
+      #apply .applyBox > ul li input::-moz-placeholder {
+        color: #ada0b7; }
+      #apply .applyBox > ul li select {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        color: #5f4572;
+        line-height: 0.8rem; }
+      #apply .applyBox > ul li img {
+        position: absolute;
+        top: 0.24rem;
+        left: 0.24rem;
+        height: 0.32rem; }
+      #apply .applyBox > ul li .phoneImg {
+        height: 0.34rem;
+        left: 0.28rem; }
+      #apply .applyBox > ul li .sexImg {
+        left: 0.22rem; }
+      #apply .applyBox > ul li .nameImg {
+        left: 0.26rem; }
+    #apply .applyBox > ul .noBack {
+      background-image: none; }
+    #apply .applyBox .headImg {
+      width: 100%; }
+      #apply .applyBox .headImg .headBox {
+        width: 24%;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 50%;
+        overflow: hidden; }
+        #apply .applyBox .headImg .headBox img {
+          width: 100%; }
+        #apply .applyBox .headImg .headBox .boximg {
+          opacity: 0; }
+        #apply .applyBox .headImg .headBox .imgBox {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1; }
+        #apply .applyBox .headImg .headBox input {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          opacity: 0; }
+      #apply .applyBox .headImg .upPhoto {
+        text-align: center;
+        font-size: 0.32rem;
+        color: white;
+        letter-spacing: 2px;
+        line-height: 0.6rem;
+        margin-top: 0.2rem; }
+      #apply .applyBox .headImg .tips {
+        text-align: center;
+        font-size: 0.24rem;
+        color: #d7b27d;
+        margin-bottom: 0.6rem; }
+    #apply .applyBox .submit {
+      width: 78%;
+      margin: 0 auto;
+      margin-top: 0.6rem; }
+      #apply .applyBox .submit button {
+        display: block;
+        width: 100%;
+        height: 0.8rem;
+        background: url(../img/btn.png) no-repeat;
+        background-size: 100% 100%;
+        color: #5f4572;
+        font-size: 0.32rem; }
+
+#hand {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(../img/handBkg.jpg) no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: column; }
+  #hand .light {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; }
+  #hand > p {
+    font-size: 0.26rem;
+    position: absolute;
+    left: 13%;
+    top: 9.5%;
+    color: #553968;
+    font-weight: bold; }
+  #hand .circleOut {
+    width: 83.86%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: -webkit-flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
+    -webkit-flex-direction: column;
+    position: relative;
+    margin-top: 0.6rem; }
+    #hand .circleOut > img {
+      width: 100%; }
+    #hand .circleOut .circleIn {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      display: -webkit-flex;
+      -webkit-align-items: center;
+      -webkit-justify-content: center;
+      -webkit-flex-direction: column; }
+      #hand .circleOut .circleIn .circleInBox {
+        position: relative;
+        width: 72.46%; }
+        #hand .circleOut .circleIn .circleInBox > img {
+          width: 100%; }
+        #hand .circleOut .circleIn .circleInBox .handBox {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          display: -webkit-flex;
+          -webkit-align-items: center;
+          -webkit-justify-content: center;
+          -webkit-flex-direction: column; }
+          #hand .circleOut .circleIn .circleInBox .handBox .hanDinBox {
+            width: 80%;
+            margin-top: 4.5px;
+            overflow: hidden;
+            border-radius: 50%; }
+            #hand .circleOut .circleIn .circleInBox .handBox .hanDinBox > img {
+              width: 100%; }
 
 /*# sourceMappingURL=index.css.map */

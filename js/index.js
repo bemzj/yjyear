@@ -63,4 +63,72 @@ $(function(){
 	$('.next').bind('click',function(){
 		swiper.slideNext();
 	});
+	//省市区
+	!function () {
+        var $target = $('#city');
+
+        $target.citySelect();
+
+        $target.on('click', function (event) {
+            event.stopPropagation();
+            $target.citySelect('open');
+        });
+
+        $target.on('done.ydui.cityselect', function (ret) {
+            $(this).val(ret.provance + ' ' + ret.city + ' ' + ret.area);
+        });
+    }();
+    //失去焦点
+    $('#city').bind('focusin',function(){
+    	$(this).blur();
+    })
+    //选择
+    $('.slt').change(function(){
+		$(this).prev('input').val($(this).children('option:selected').val());
+	});
+	//截取图片
+	$("#clipArea").photoClip({
+		width: 200,
+		height: 200,
+		file: "#file",
+		view: ".view",
+		ok: "#clipBtn",
+		loadStart: function() {
+			$('#clipArea').show();
+			$('#clipClose').on('click',function(){
+				$('#clipArea').hide();
+			});
+			//开启加载页面
+		},
+		loadComplete: function() {
+			console.log("照片读取完成");
+			//关闭加载页面
+		},
+		clipFinish: function(dataURL) {
+			$('#clipArea').hide();
+			$('.imgBox').attr('src',dataURL);
+		}
+	});
+	//提交
+	$('.btn button').bind('click',function(){
+		clearInterval(nextTween);
+		$('.nextBox').css({'bottom':'0.8rem','opacity':'1'});
+		$('#index').fadeOut(500);
+		$('#apply').fadeIn(500);
+		$('.headImg ul li').eq(0).addClass('animated fadeInDown');
+		$('.headImg ul li').eq(1).addClass('animated rotateIn');
+		$('.headImg ul li').eq(2).addClass('animated fadeInUp');
+		$('.message li').eq(0).addClass('animated slideInLeft');
+		$('.message li').eq(1).addClass('animated slideInRight');
+		$('.message li').eq(2).addClass('animated slideInLeft');
+		$('.message li').eq(3).addClass('animated slideInRight');
+		$('.message li').eq(4).addClass('animated slideInLeft');
+		$('.submit').addClass('animated fadeInUp');
+	});
+	$('.submit').bind('click',function(){
+		$('#apply').fadeOut(500);
+		$('#hand').fadeIn(500);	
+	});
+	//指纹
+	
 });
