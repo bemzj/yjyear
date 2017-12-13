@@ -21,6 +21,8 @@
 	</head>
 	<body>
 		<audio id="pMusic"  loop="loop" preload  src="music/wx.mp3" hidden="hidden"></audio >
+		<audio id="pressed" preload  src="music/press.mp3" hidden="hidden"></audio >
+		<audio id="bg"  loop="loop" preload  src="http://m.gani.com.cn/activity/newProduct/music/bg.mp3" hidden="hidden"></audio >
 		<!--视频聊天-->
 		<div id="phoneCome">
 			<div class="head">
@@ -189,7 +191,12 @@
 		<!--hand-->
 		<div id="hand" style="display: none;">
 			<img class="light" src="img/light.png"/>
+			<img class="input" src="img/input.png"/>
+			<img class="now" src="img/now.png"/>
 			<p>王文杰</p>
+			<div class="rBox">
+				<img src="img/r1.png" />
+			</div>
 			<div class="circleOut">
 				<img src="img/circleOut.png" />
 				<div class="circleIn">
@@ -198,10 +205,47 @@
 						<div class="handBox">
 							<div class="hanDinBox">
 								<img src="img/handBBkg.png" />
+								<div class="sao">
+									<img src="img/sao.png"/>
+								</div>
+								<button id="press"></button>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+		<div id="success">
+			<ul>
+				<li>
+					<img src="img/logo.png" class="slogo" />
+				</li>
+				<li>
+					<img src="img/title.png" class="stitle" />
+				</li>
+				<li>
+					<div class="wxHead">
+						<div class="wxHeadIn">
+							<img src="img/head.png" />
+						</div>
+					</div>
+				</li>
+				<li>
+					<p class="namestore">王文杰／杭州朗高</p>
+				</li>
+			</ul>
+			<div class="sBox">
+				<ul>
+					<li>
+						<img src="img/success.png" class="ssTitle" />
+					</li>
+					<li>
+						<p>2017-12-27&ensp;我们不见不散</p>
+					</li>
+				</ul>
+			</div>
+			<div class="return" style="display: block;">
+				<button>返回首页</button>
 			</div>
 		</div>
 	   <script type="text/javascript" src="js/photoClip/jquery-2.1.1.min.js" type="text/javascript"></script>
@@ -254,6 +298,25 @@
 				}
 			});
 //			$('#index').remove();
+			function audioAutoPlay(id,v){
+			    var audio = document.getElementById(id);
+			    audio.play();
+			    if(v==0)
+			    {
+			    	audio.pause();
+			    }
+			    document.addEventListener("WeixinJSBridgeReady", function () {
+			            audio.play();
+			            if(v==0)
+					    {
+					    	audio.pause();
+					    }
+			    }, false);
+			}
+			audioAutoPlay('bg',0);
+			audioAutoPlay('pMusic',0);
+			audioAutoPlay('pressed',0);
+			audioAutoPlay('video',0);
 		</script>
 		<script type="text/javascript" src="js/index.js" ></script>
 	</body>
