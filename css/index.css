@@ -13,6 +13,142 @@ body {
   width: 100%;
   height: 100%; }
 
+#reload {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: url(../img/applyBkg.jpg) no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: column; }
+  #reload ul {
+    width: 100%; }
+    #reload ul li:nth-child(2) {
+      display: block;
+      width: 60%;
+      margin: 0 auto;
+      position: relative;
+      height: 0.15rem;
+      margin-top: 0.2rem;
+      margin-left: 16%;
+      background-color: #5f4572; }
+      #reload ul li:nth-child(2) .upOut {
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+        border-radius: 0.2rem;
+        position: relative;
+        background-color: #1c1025; }
+      #reload ul li:nth-child(2) .up {
+        background-color: #d7b27d;
+        height: 100%;
+        width: 0%; }
+      #reload ul li:nth-child(2) p {
+        position: absolute;
+        left: 102%;
+        top: -0.1rem;
+        font-size: 0.2rem;
+        color: white; }
+  #reload img {
+    width: 50%;
+    margin: 0 auto; }
+
+#exchange {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+  background: url(../img/applyBkg.jpg) no-repeat;
+  background-size: 100% 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  display: -webkit-flex;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  -webkit-flex-direction: column; }
+  #exchange .messageBox {
+    width: 77.6%;
+    margin: 0 auto;
+    background-color: #ece8e2;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 0 0 0.6rem; }
+    #exchange .messageBox ul {
+      width: 92%;
+      margin: 0 auto; }
+      #exchange .messageBox ul li {
+        border-bottom: 1px solid #d8d8d8;
+        padding-bottom: 0.1rem;
+        padding-top: 0.4rem; }
+      #exchange .messageBox ul p {
+        text-indent: 0.2rem;
+        font-size: 0.26rem; }
+        #exchange .messageBox ul p span {
+          color: #adabae;
+          display: inline-block;
+          padding: 0 0.2rem; }
+    #exchange .messageBox ul li:nth-child(1) {
+      padding-bottom: 0.6rem;
+      padding-top: 0.6rem;
+      position: relative; }
+      #exchange .messageBox ul li:nth-child(1) .hBox {
+        position: absolute;
+        width: 1.2rem;
+        height: 1.2rem;
+        top: 0.2rem;
+        right: 0.2rem;
+        border: 1px solid #5f4572;
+        border-radius: 50%; }
+        #exchange .messageBox ul li:nth-child(1) .hBox img {
+          width: 100%; }
+      #exchange .messageBox ul li:nth-child(1) p {
+        text-indent: 0rem; }
+    #exchange .messageBox ul li:nth-child(2) p {
+      background: url(../img/p1.png) no-repeat 0.18rem center;
+      background-size: auto 0.3rem; }
+    #exchange .messageBox ul li:nth-child(3) p {
+      background: url(../img/p2.png) no-repeat 0.18rem center;
+      background-size: auto 0.3rem; }
+    #exchange .messageBox ul li:nth-child(4) p {
+      background: url(../img/p3.png) no-repeat 0.18rem center;
+      background-size: auto 0.3rem; }
+    #exchange .messageBox ul li:nth-child(5) p {
+      background: url(../img/p4.png) no-repeat 0.18rem center;
+      background-size: auto 0.3rem; }
+    #exchange .messageBox ul li:nth-child(6) p {
+      background: url(../img/p5.png) no-repeat 0.18rem center;
+      background-size: auto 0.3rem; }
+  #exchange .twoBtn {
+    width: 77.6%;
+    margin: 0 auto;
+    margin-top: 0.4rem; }
+    #exchange .twoBtn button {
+      display: block;
+      width: 45%;
+      height: 0.8rem;
+      border-radius: 5px;
+      overflow: hidden;
+      background: url(../img/btn.png) no-repeat;
+      background-size: 100% 100%;
+      color: #5f4572;
+      font-size: 0.32rem;
+      font-weight: bold; }
+    #exchange .twoBtn button:nth-child(1) {
+      margin-right: 10%; }
+
 #phoneCome {
   width: 100%;
   height: 100%;

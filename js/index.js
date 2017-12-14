@@ -1,5 +1,21 @@
 $(function(){
-	$('#pMusic')[0].play();
+//	
+	var numbers = 1;
+	var preload = setInterval(function(){
+		$('.up').css('width',numbers+'%');
+		$('.load').html(numbers+'%');
+		numbers++;
+		if(numbers==101)
+		{
+			clearInterval(preload);
+			$('#phoneCome').fadeIn(500);
+			$('#reload').fadeOut(500,function(){
+				$('#reload').remove();
+				$('.hidden').remove();
+//				$('#pMusic')[0].play();
+			});
+		}
+	},40);
 	//接听
 	$('.accept a').on('click',function(){
 		$('#phoneCome').hide();

@@ -23,8 +23,42 @@
 		<audio id="pMusic"  loop="loop" preload  src="music/wx.mp3" hidden="hidden"></audio >
 		<audio id="pressed" preload  src="music/press.mp3" hidden="hidden"></audio >
 		<audio id="bg"  loop="loop" preload  src="http://m.gani.com.cn/activity/newProduct/music/bg.mp3" hidden="hidden"></audio >
+		<!--预加载-->
+		<div id="reload">
+			<ul>
+				<li>
+					<img src="img/logo.png" />
+				</li>
+				<li>
+					<div class="upOut">
+						<div class="up">
+						
+						</div>
+					</div>		
+					<p class="load">100%</p>
+				</li>
+			</ul>
+			
+		</div>
+		<div class="hidden" hidden="hidden">
+			<script type="text/javascript">
+		            var images = new Array();
+		            var urls="";
+		            function preload() {
+		                for (i = 0; i < preload.arguments.length; i++) {
+		                    images[i] = new Image()
+		                    images[i].src = preload.arguments[i]
+		                }
+		            }
+		            preload(
+		                urls+"accept.png",
+		                urls+"accept.png",
+		                urls+"accept.png"
+		            )
+		    </script>
+		</div>
 		<!--视频聊天-->
-		<div id="phoneCome">
+		<div id="phoneCome" style="display: none;">
 			<div class="head">
 				<div class="floatl">
 					<img src="img/head.png" />
@@ -83,19 +117,19 @@
 	            				<div class="timeBox">
 	            					<div class="floatl">
 	            						<p>天</p>
-	            						<p>18</p>
+	            						<p class="day">18</p>
 	            					</div>
 	            					<div class="floatl">
 	            						<p>时</p>
-	            						<p>18</p>
+	            						<p class="hour">18</p>
 	            					</div>
 	            					<div class="floatl">
 	            						<p>分</p>
-	            						<p>18</p>
+	            						<p class="minute">18</p>
 	            					</div>
 	            					<div class="floatl">
 	            						<p>秒</p>
-	            						<p>18</p>
+	            						<p class="second">18</p>
 	            					</div>
 	            					<div class="clearl"></div>
 	            				</div>
@@ -187,6 +221,43 @@
 	   <div id="clipArea" style="display: none;">
 			<button id="clipBtn">截取</button>
 			<button id="clipClose">取消</button>
+		</div>
+		<!--修改页面-->
+		<div id="exchange">
+			<div class="messageBox">
+				<ul>
+					<li>
+						<p><span>头像</span></p>	
+						<div class="hBox">
+							<img src="img/head.png"/>
+						</div>
+					</li>
+					<li>
+						<p><span>姓名</span>张三</p>
+					</li>
+					<li>
+						<p><span>性别</span>男</p>
+					</li>
+					<li>
+						<p><span>门店</span>所属经销商</p>
+					</li>
+					<li>
+						<p><span>手机</span>13112325896</p>
+					</li>
+					<li>
+						<p><span>地区</span>广东省广州市海珠区</p>
+					</li>
+				</ul>
+			</div>
+			<div class="twoBtn">
+				<button class="floatl">
+					确定
+				</button>
+				<button class="floatl">
+					修改
+				</button>
+				<div class="clearl"></div>
+			</div>
 		</div>
 		<!--hand-->
 		<div id="hand" style="display: none;">
@@ -317,6 +388,24 @@
 			audioAutoPlay('pMusic',0);
 			audioAutoPlay('pressed',0);
 			audioAutoPlay('video',0);
+			
+			setInterval(function(){
+				var oDate = new Date(2017,12,16,0,0,0);
+				var nDate = new Date();
+				var ms = oDate.getTime() - nDate.getTime();
+				  //毫秒转换成秒
+				  var oSec = parseInt(ms/1000);
+				  var oDay = parseInt(oSec/86400)%30;
+				  oSec%=86400;
+				  var oHour = parseInt(oSec/3600);
+				  oSec%=3600;
+				  var oMin = parseInt(oSec/60);
+				  oSec%=60;
+				  $('.day').text(oDay);
+				  $('.hour').text(oHour);
+				  $('.minute').text(oMin);
+				  $('.second').text(oSec);
+			},1000);	
 		</script>
 		<script type="text/javascript" src="js/index.js" ></script>
 	</body>
